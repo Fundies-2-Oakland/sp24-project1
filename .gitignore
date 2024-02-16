@@ -1,0 +1,16 @@
+application.log
+build
+out
+.idea
+.gradle
+video/
+screenshots/
+gui-parameters/
+target/
+waltz*.wav
+*.iml
+*.zip
+docs/
+.DS_Store
+temp*
+newImg.png
