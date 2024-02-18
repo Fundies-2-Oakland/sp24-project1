@@ -3,8 +3,12 @@ package student;
 import java.awt.image.BufferedImage;
 
 public class Grid extends AbstractGrid {
-    public Grid(BufferedImage image, long seed) {
+    Grid(BufferedImage image, long seed) {
         super(image, seed);
+    }
+
+    Grid(BufferedImage image, long seed, boolean testMode) {
+        super(image, seed, testMode);
     }
 
     @Override
@@ -19,6 +23,5 @@ public class Grid extends AbstractGrid {
 
     @Override
     void removeBluestColumn() throws RequestFailedException {
-
     }
 }

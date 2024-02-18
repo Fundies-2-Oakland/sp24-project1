@@ -9,6 +9,7 @@ import java.util.Random;
  */
 public abstract class AbstractGrid {
     protected Random random;
+    protected boolean testMode = false;
 
     /**
      * Constructs a grid from the provided image and the seed, which is used
@@ -21,6 +22,22 @@ public abstract class AbstractGrid {
      */
     public AbstractGrid(BufferedImage image, long seed) {
         random = new Random(seed);
+    }
+
+    /**
+     * Constructs a grid from the provided image and the seed, optionally
+     * specifying whether to run in test mode, which suppresses external
+     * operations, such as temporary file creation.
+     *
+     * @param image    the image
+     * @param seed     the seed, which is used for random number generation
+     * @param testMode whether to run in test mode
+     * @throws IllegalArgumentException if the image is invalid, such as having 0
+     *                                  rows or columns
+     */
+    AbstractGrid(BufferedImage image, long seed, boolean testMode) {
+        this(image, seed); // call the other constructor
+        this.testMode = testMode;
     }
 
     /**

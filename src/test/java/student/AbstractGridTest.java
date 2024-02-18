@@ -12,6 +12,6 @@ public class AbstractGridTest {
     // You must not change this constructor.
     // Use only this to create test fixtures.
     public AbstractGrid makeGrid(BufferedImage bufferedImage) {
-        return new Grid(bufferedImage, SEED);
+        return new Grid(bufferedImage, SEED, true);
     }
 }
